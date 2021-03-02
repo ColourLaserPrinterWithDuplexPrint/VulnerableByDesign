@@ -1,0 +1,20 @@
+Remote code execution (RCE) is a very severe server-side exploit which can allow an attacker full control over a target system, which is why it's important to heavily sanitize user input while in a situation that could allow RCE. 
+
+Some of these scenarios include :
+    - Interacting with the command line using a user supplied argument.
+    - Using an 'exec' or 'eval' statement with a user supplied argument.
+    
+Some ways to fix these vulnerabilities would be to :
+    - Remove ';', '&', '"' and "'" from the user supplied queries while interacting with the command line. 
+    - Only allow characters specific to the task at hand into the query.
+    - Interact with the command line using user supplied arguments as least as possible.
+    
+    - Wrap user supplied variables in talking marks. Example :
+            - ping '127.0.0.1';
+         Instead of :
+            - ping 127.0.0.1;
+            
+
+Taking out specific characters is a good start, but some new command line exploits could be discovered (see 'Shellshock') which could turn previously safe queries into vectors for RCE, which is why it's good to only allow characters specific to the query.
+
+
