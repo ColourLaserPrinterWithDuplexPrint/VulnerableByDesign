@@ -1,4 +1,5 @@
 import socket
+# A simple application to check if a Python library exists.
 def main():
     try:
         print("\nA simple Python app to check if library exists!")
@@ -20,12 +21,15 @@ def main():
             conn,addr = s.accept()
             print("Connection Recieved From " + str(addr))
             data = conn.recv(1024)
+            library = data.decode()
             try:
-                exec("import " + data.decode())
-                conn.send(b"Library Does Exist")
+                #Here is the exploit.
+                #The Python program executes a query from the user without checking the contents of it, leading to remote code execution (RCE)
+                exec("import " + library)
+                conn.send(b"[+] Library Does Exist")
             except Exception as e:
                 print(e)
-                conn.send(b"Library Does Not Exist")
+                conn.send(b"[-] Library Does Not Exist")
             conn.shutdown(socket.SHUT_RDWR)
             conn.close()
             print("Connection Closed Successfully\n")
