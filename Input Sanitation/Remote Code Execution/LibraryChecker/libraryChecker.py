@@ -23,7 +23,7 @@ def main():
         s.listen(0)
         while True:
             print("Waiting For Connection")
-            #Waits for a connection and saves the connection object to 'conn' and the connected IP/Port to 'addr'
+            #Waits for a connection and saves the connection object to 'conn' and the connected IP/Port to 'addr'. The 'conn' variable handles sending and receiving data between the client (attacker) and the server (target).
             conn,addr = s.accept()
             print("Connection Recieved From " + str(addr))
             #Receives sent data
@@ -32,7 +32,7 @@ def main():
             library = data.decode()
             try:
                 #Here is the exploit.
-                #To check if the library is valid, the Python program executes a query from the user without checking the contents of it, leading to remote code execution (RCE)
+                #To check if the library is valid, the Python program executes a query from the user without checking the contents of it, leading to remote code execution (RCE).
                 exec("import " + library)
                 #If this hasn't thrown an error, the library does exist
                 conn.send(b"[+] Library Does Exist")
