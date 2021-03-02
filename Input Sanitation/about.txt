@@ -1,18 +1,4 @@
 Failure to sanitize user input can lead to many software vulnerabilities such as SQL injection, RCE and XSS. This is why it's important to never trust the input of the user, especially if it's going to be used anywhere else in an application. One thing to remember is to never trust client side sanitization, since that can be disabled (so  don't sanitize with Javascript!).
-
-Some Basic Fixes for these attacks :
-  SQL Injection:
-    - Remove Talking Marks (') from user input.
-    - Wrap queries in talking marks to avoid UNION attacks.
-    - Used Prepared Queries
-  
-  RCE :
-    - Sanitize User Input. don't allow ';', '&' or any other characters which could be used to inject code into an application if you're using it to make a subprocess call or executing it in another call.
-    - Only allow certain characters as input & remove all other characters when the input is retrieved.
-  
-  XSS :
-    - Remove '<' and '>'
-    - Use PHP's 'htmlspecialchars' to sanitize input.
   
   
     
