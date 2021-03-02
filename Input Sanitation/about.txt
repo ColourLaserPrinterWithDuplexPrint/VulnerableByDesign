@@ -1,4 +1,4 @@
-Failure to sanitize user input can lead to many software vulnerabilities such as SQL injection, RCE and XSS. This is why it's important to never trust the input of the user, especially if it's going to be used anywhere else in an application.
+Failure to sanitize user input can lead to many software vulnerabilities such as SQL injection, RCE and XSS. This is why it's important to never trust the input of the user, especially if it's going to be used anywhere else in an application. One thing to remember is to never trust client side sanitization, since that can be disabled (so  don't sanitize with Javascript!).
 
 Some Basic Fixes for these attacks :
   SQL Injection:
