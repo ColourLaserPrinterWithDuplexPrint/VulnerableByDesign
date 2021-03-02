@@ -1,0 +1,23 @@
+<html onKeyPress="checkSubmit(event)">
+<style>
+#output {font-family:monospace;}
+</style>
+<script>
+function getInput() {
+username = document.getElementById("username").value;
+password = document.getElementById('test').value;
+initial = "SELECT * FROM users WHERE username = '" + username + "' AND password = '"+password+"';";
+document.getElementById("output").innerHTML = initial;
+}
+function checkSubmit(e) {
+if(e && e.keyCode == 13) {
+document.getElementById("btn").click()
+}
+}
+</script>
+<h1>SQLi Demonstration</h1>
+<input id="username" placeholder="Username">
+<input id="test" placeholder = "Password">
+<input type="submit" onclick="getInput()" id = 'btn'>
+<h2 id="output">
+</html>
