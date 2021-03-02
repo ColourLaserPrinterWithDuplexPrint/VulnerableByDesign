@@ -3,7 +3,7 @@ SQL Injection is a server-side exploit which can be leveraged to read, modify an
 Some scenarios where SQL Injection may occur would be :
     - Logging in to a website
     - Signing up for a website
-    - Searching for a product using a SQL query
+    - Searching for a product using an SQL query
 
 Some ways to prevent SQL Injection would be to :
     - Used prepared queries
