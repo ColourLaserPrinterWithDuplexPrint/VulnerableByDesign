@@ -1,6 +1,9 @@
 import getpass
+#imports the 'getpass' library
 user = getpass.getuser()
+#Uses getpass to get the current user
 if user == "root":
+    #If the user is 'root'
     print("[+] You Are Authorized. The Password Is abc123")
 else:
     print("[-] You Are Not Authorized.")
