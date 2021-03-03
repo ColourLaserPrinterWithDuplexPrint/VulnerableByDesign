@@ -1,0 +1,11 @@
+XSS (cross site scripting) Is a web exploit which can allow a user to inject HTML/Javascript onto another user's browser through tags.
+
+Some scenarios where XSS could occur would be :
+    - A web service that allows you to send a message to another user.
+    - A web service which allows you to post a message.
+    - A web service which allows you to transform text.
+    
+Potential Fixes For XSS Could Be :
+    - PHP htmlspecialchars.
+    - Removing '<' and '>' on query submit.
+    - Replacing '<' and '>' on query submit.
