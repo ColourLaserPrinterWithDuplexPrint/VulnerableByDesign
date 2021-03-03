@@ -15,5 +15,5 @@ while True:
 #
 # However, you could also enter 'print("abc")' as the list and your query will be executed, which means that you could execute code through 'eval'. The limits to eval RCE is that eval can't execute very sophisticated queries, unlike 'exec'.
 #
-# A better option to convert a string to list would be to use 'ast.literal_eval(string)'. This will throw an error if the statement is not a list, but the evil code will not be executed.
+# A better option to convert a string to list would be to use 'ast.literal_eval(string)'. This will throw an error if the statement is not a list, but the unwanted code will not be executed.
 
