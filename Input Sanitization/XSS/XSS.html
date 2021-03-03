@@ -1,5 +1,11 @@
 <html>
   <head>
+	<script>
+	function getInput() {
+	inputVal = document.getElementById("input").value;
+	document.getElementById("output").innerHTML = inputVal;
+	}
+	</script>
 	<style>
 	#output {
 	font-style:italic;
@@ -9,6 +15,8 @@
   </head>
   <body>
     <h3>A simple application to display your text as italic!</h1>
+    <input id="input"></input>
+    <input type="submit" onclick = "getInput()">
     <h1 id="output">test</h2>
   </body>
 </html>
