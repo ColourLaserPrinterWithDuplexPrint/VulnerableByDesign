@@ -6,6 +6,7 @@ else:
     print("[-] You Are Not Authorized.")
     exit()
 input("Press Enter To Exit >> ")
+exit()
 
 # The problem with 'getpass.getuser()' is that it searches for environment variables to get the username of the current logged in user, and environment variables can be manipulated.
 #
