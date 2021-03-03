@@ -1,0 +1,3 @@
+Instead, of using 'eval', use 'ast.literal_eval' since it doesn't allow remote code execution and will throw an error if the supplied variable is not a valid data type.
+
+https://docs.python.org/3/library/ast.html#ast.literal_eval
