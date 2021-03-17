@@ -7,7 +7,9 @@ while True:
     #Iterates through list and prints results
     for _ in lst:
        print(_)
-  except:
+  except Exception as e:
+    print(e)
+    #Prints the caught error
     print("Failed to convert string to list...")
   print("\n")
 
