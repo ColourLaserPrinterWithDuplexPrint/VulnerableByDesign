@@ -19,7 +19,7 @@ exit()
 #
 # getpass.getuser() checks the following environment variables : LOGNAME, USER, LNAME and USERNAME
 #
-# On Unix/Linux, you can use the following code to bypass this program :
+# On Unix/Linux, you can use the following command line calls to bypass this program :
 #           export LOGNAME='root'
 #           export USER='root'
 #           export LNAME='root'
