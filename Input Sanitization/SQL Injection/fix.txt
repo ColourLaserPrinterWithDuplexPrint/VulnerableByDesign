@@ -6,7 +6,7 @@ Some scenarios where SQL Injection may occur would be :
     - Searching for a product using an SQL query
 
 Some ways to prevent SQL Injection would be to :
-    - Used prepared queries
+    - Use prepared queries
     - Wrap user supplied variables in quotes. Example:
             SELECT * FROM products WHERE id = '1';
          Instead Of:
