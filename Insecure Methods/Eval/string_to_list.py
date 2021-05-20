@@ -15,10 +15,10 @@ while True:
 
 # The python 'eval' statement executes a variable. It is sometimes used to convert a string to a list.
 #
-# In this example, you could enter a Python array and it would iterate through the array which you provided. However, you could also enter 'print("abc")' into the input and your query will be executed, which means that you could execute code through 'eval'. The limits to eval RCE is that eval can't execute very sophisticated queries without throwing errors, unlike 'exec'.
+# In this example, you could enter a Python array and it would iterate through the array which you provided. However, you could also enter 'print("abc")' into the input and your query will be executed, which means that you could execute code through 'eval'. The limits to eval RCE is that eval can't execute very complicated queries without throwing errors, unlike 'exec'.
 #
 #
-# Sophisticated RCE with eval can be achieved through using an 'exec' statement in your initial RCE. For example : 
+# Better RCE with eval can be achieved through using an 'exec' statement in the initial RCE. For example : 
 #
 # eval('''exec("import subprocess; print(subprocess.check_output('cat /etc/shadow', shell=True))")''')
 #
