@@ -5,7 +5,11 @@ usernames = ["admin","ocelot"]
 passwords = ["admin","P@55w0rd!"]
 
 ###################################
+#=+/ If 'Verbose' Is True, More Information Will Be Shown \+=#
 verbose = True
+
+#=+/ An Array Of Characters That Will Be Deleted Before The Query Is Executed \+=#
+illegal_chars = []
 ###################################
 #Imports the 'sqlite3' library
 import sqlite3
@@ -43,7 +47,9 @@ while True:
         #Gets input for the username and password
         username = input("Username : ")
         password = input("Password : ")
-
+        for illegal_char in illegal_chars:
+            username = username.replace(illegal_char, '')
+            password = password.replace(illegal_char, '')
         #Makes an SQL Query using the username and password from the inputs
         val = "SELECT username,password FROM users WHERE username = '"+username+"' AND password = '"+password+"';"
         if verbose == True:
