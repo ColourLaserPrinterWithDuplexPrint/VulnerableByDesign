@@ -1,1 +1,1 @@
-Since getpass.getuser() is not secure, don't rely on it for authentication. Instead, you can use 'os.getlogin()' since it's harder to manipulate.
+Since getpass.getuser() can be exploited, don't rely on it for authentication.
