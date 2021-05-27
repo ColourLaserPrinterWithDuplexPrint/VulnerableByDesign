@@ -5,7 +5,8 @@ usernames = ["admin","ocelot"]
 passwords = ["admin","P@55w0rd!"]
 
 ###################################
-
+verbose = True
+###################################
 #Imports the 'sqlite3' library
 import sqlite3
 
@@ -45,8 +46,8 @@ while True:
 
         #Makes an SQL Query using the username and password from the inputs
         val = "SELECT username,password FROM users WHERE username = '"+username+"' AND password = '"+password+"';"
-
-        print("[+] Running SQL Query : " + val)
+        if verbose == True:
+            print("[+] Running SQL Query : " + val)
         #Executes the SQL Query
         cursor.execute(val)
 
@@ -54,7 +55,8 @@ while True:
         queryOutput = cursor.fetchall()
 
         #Prints the output of the SQL Query
-        print("[+] Output Of Query : " + str(queryOutput))
+        if verbose == True:
+            print("[+] Output Of Query : " + str(queryOutput))
         
         #Checks if the query returned anything.
         if len(queryOutput) > 0:
