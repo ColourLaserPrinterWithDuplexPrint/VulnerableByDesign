@@ -15,13 +15,17 @@ else:
 input("Press Enter To Exit >> ")
 exit()
 
-# The problem with 'getpass.getuser()' is that it searches for environment variables to get the username of the current logged in user, and environment variables can be manipulated.
+# A problem with 'getpass.getuser()' is that it searches for environment variables to get the username of the current logged in user, and environment variables can be manipulated.
 #
-# getpass.getuser() checks the following environment variables : LOGNAME, USER, LNAME and USERNAME
+# On Unix/Linux systems, getpass.getuser() checks the following environment variables : LOGNAME, USER, LNAME and USERNAME
+# And on Windows systems, getpass.getuser() checks the 'USERNAME' environment variable.
 #
-# On Unix/Linux, you can use the following command line calls to bypass this program :
+#
+# On Unix/Linux, the following command line calls can be used to bypass this program :
 #           export LOGNAME='root'
 #           export USER='root'
 #           export LNAME='root'
 #           export USERNAME='root'
-
+#
+# And on Windows :
+#           set USERNAME='root'
