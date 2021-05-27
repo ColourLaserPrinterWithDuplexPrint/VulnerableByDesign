@@ -13,6 +13,7 @@ Some ways to prevent SQL Injection would be to :
              SELECT * FROM products WHERE id = 1;
     
      - Remove quotes from the user supplied input
+     - Use a WAF (Web App Firewall)
      
      
      
